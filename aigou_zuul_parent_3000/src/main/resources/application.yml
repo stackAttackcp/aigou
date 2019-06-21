@@ -1,0 +1,16 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:1000/eureka
+  instance:
+    prefer-ip-address: true
+server:
+  port: 3000
+spring:
+  application:
+    name: AIGOU_ZUUL
+zuul:
+  routes:
+    aigou_plat: /login/**
+  ignored-services: "*"  #忽略所有
+  prefix: /aigou #前缀
